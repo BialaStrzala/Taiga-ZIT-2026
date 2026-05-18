@@ -3,7 +3,18 @@
 /*=============================================================
 === ZADANIE 1 - Dodanie palety kolorów  ===
 =============================================================*/
-/* Tu wklej kod do swojego zadania */
+:root {
+    --background: #191d3d;
+    --background-highlight: #1d2455;
+    --background-highlight-light: #222a67;
+    --text: #fff;
+    --text-faded: #ddd;
+    --text-faded-dark: #6b7280;
+
+    --primary: #0b6bbf;
+    --primary-light: #2fadff;
+    --primary-dark: #074b88;
+}
 
 
 
