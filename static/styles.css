@@ -3,7 +3,18 @@
 /*=============================================================
 === ZADANIE 1 - Dodanie palety kolorów  ===
 =============================================================*/
-/* Tu wklej kod do swojego zadania */
+:root {
+    --background: #191d3d;
+    --background-highlight: #1d2455;
+    --background-highlight-light: #222a67;
+    --text: #fff;
+    --text-faded: #ddd;
+    --text-faded-dark: #6b7280;
+
+    --primary: #0b6bbf;
+    --primary-light: #2fadff;
+    --primary-dark: #074b88;
+}
 
 
 
@@ -11,5 +22,213 @@
 === ZADANIE 2 - Dodanie styli CSS ===
 =============================================================*/
 /* Tu wklej kod do swojego zadania */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    color: var(--text);
+}
 
+.wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.topbar {
+    padding: 18px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-highlight);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: var(--text);
+}
+
+.logo span {
+    color: var(--primary-light);
+}
+
+.top-links {
+    display: flex;
+    gap: 8px;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 24px 2rem;
+    gap: 0;
+}
+
+.main-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary-light);
+    background: var(--background-highlight);
+    border: 1px solid var(--primary-dark);
+    border-radius: 999px;
+    padding: 5px 16px;
+    margin-bottom: 28px;
+}
+
+.main h1 {
+    font-size: clamp(38px, 6vw, 64px);
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin-bottom: 22px;
+    max-width: 800px;
+}
+
+.main h1 em {
+    font-style: normal;
+    color: var(--primary-light);
+}
+
+.main p {
+    font-size: 17px;
+    color: var(--text-faded);
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 44px;
+}
+
+.main-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-main-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    background-color: var(--primary);
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
+    transition: background-color 0.18s, transform 0.12s, box-shadow 0.18s;
+    letter-spacing: -0.1px;
+    border: none;
+}
+
+.btn-main-primary:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px var(--primary-dark);
+}
+
+.btn-main-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.6rem 1rem;
+    background-color: transparent;
+    color: var(--text-faded);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+    border: 1.5px solid var(--primary-dark);
+    transition: border-color 0.18s, color 0.18s, background-color 0.18s;
+}
+
+.btn-main-secondary:hover {
+    border-color: var(--primary);
+    color: var(--text);
+    background: var(--background-highlight-light);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 24px;
+    font-size: 12px;
+    color: var(--primary);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    max-width: 900px;
+    width: 100%;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.feature-item {
+    background: var(--background-highlight);
+    border: 1px solid var(--primary-dark);
+    border-radius: 14px;
+    padding: 22px 22px 20px;
+    text-align: left;
+}
+
+.feature-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 200px;
+    min-height: 70px;
+    overflow-x: hidden;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.feature-item p {
+    font-size: 13px;
+    color: var(--text-faded-dark);
+    line-height: 1.55;
+}
+
+.features-title {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+hr {
+    width: 80%;
+    color: var(--background-highlight-light);
+    align-self: center;
+    justify-self: center;
+}
